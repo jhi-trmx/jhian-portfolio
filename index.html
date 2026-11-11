@@ -1,12 +1,463 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prince Jhian De los Reyes| Personal Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #263445;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #172b4d;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h2 {
+            font-size: 22px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #61dafb;
+        }
+
+        section {
+            padding: 75px 10%;
+            scroll-margin-top: 75px;
+        }
+
+        .hero {
+            background: #172b4d;
+            color: white;
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #61dafb;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+        }
+
+        .hero .subtitle {
+            color: #61dafb;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            color: #172b4d;
+            font-size: 28px;
+            margin-bottom: 25px;
+            border-left: 5px solid #1597bb;
+            padding-left: 12px;
+        }
+
+        .content-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            margin-bottom: 20px;
+        }
+
+        .content-card h3 {
+            color: #172b4d;
+            margin-bottom: 10px;
+        }
+
+        .content-card p {
+            color: #526174;
+        }
+
+        .skills-container,
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-bottom: 4px solid #1597bb;
+        }
+
+        .skill h3 {
+            color: #172b4d;
+            margin-bottom: 10px;
+        }
+
+        .skill ul {
+            padding-left: 20px;
+            color: #526174;
+        }
+
+        .project {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .project h3 {
+            color: #172b4d;
+            margin-bottom: 10px;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 12px;
+            color: #087e9e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        .values-list {
+            padding-left: 25px;
+            color: #526174;
+        }
+
+        .values-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #172b4d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                text-align: center;
+                padding: 60px 8%;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            section {
+                padding: 55px 7%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
-    <h1>Hello, World!</h1>
+
+    <!-- NAVIGATION -->
+    <header>
+        <h2>Prince Jhian</h2>
+
+        <nav>
+            <a href="#profile">Profile</a>
+            <a href="#academic">Academic</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#values">Values</a>
+        </nav>
+    </header>
+
+    <!-- 1. PROFILE AND BIOGRAPHY -->
+    <section class="hero" id="profile">
+
+        <img src="profile.jpg" alt="Prince Jhian Profile Picture">
+
+        <div>
+            <p class="subtitle">BSIT 1-D | Aspiring Web Developer</p>
+
+            <h1>Hi, I'm Prince Jhian!</h1>
+
+            <p>
+                Welcome to my personal web portfolio.
+                Explore my academic journey, technical skills,
+                projects, and experiences in Information Technology.
+            </p>
+        </div>
+
+    </section>
+
+    <section>
+        <h2 class="section-title">About Me</h2>
+
+        <div class="content-card">
+            <p>
+                I am Prince Jhian T. De los Reyes, a Bachelor of Science
+                in Information Technology student from BSIT 1-D.
+                I am an aspiring web developer with a strong interest
+                in technology and computer programming. I enjoy learning
+                how websites and applications are created using different
+                programming languages and tools. Currently, I am developing
+                my knowledge of HTML, CSS, and C++ through academic
+                activities and personal practice. I believe that learning
+                technology requires patience, creativity, and continuous
+                improvement. My goal is to strengthen my programming
+                abilities, gain practical experience, and become a skilled
+                IT professional who can create useful and meaningful
+                digital solutions in the future.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. ACADEMIC BACKGROUND -->
+    <section id="academic">
+        <h2 class="section-title">Academic Background</h2>
+
+        <div class="content-card">
+            <h3>Current College Education</h3>
+            <p><strong>Program:</strong> Bachelor of Science in Information Technology</p>
+            <p><strong>Section:</strong> BSIT 1-D</p>
+            <p><strong>Institution:</strong> [Your College/University]</p>
+            <p><strong>Expected Graduation:</strong> [Year]</p>
+        </div>
+
+        <div class="content-card">
+            <h3>Senior High School</h3>
+            <p><strong>School:</strong> [Your Senior High School]</p>
+            <p><strong>Track/Strand:</strong> [Your Track or Strand]</p>
+            <p><strong>Year Graduated:</strong> [Year]</p>
+        </div>
+
+        <div class="content-card">
+            <h3>Relevant Coursework</h3>
+            <ul>
+                <li>Computer Programming</li>
+                <li>Introduction to Computing</li>
+                <li>Web Development</li>
+                <li>Computer Systems and Technologies</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 3. NOTABLE ACHIEVEMENTS -->
+    <section id="achievements">
+        <h2 class="section-title">Notable Achievements</h2>
+
+        <div class="content-card">
+            <h3>Academic and Personal Development</h3>
+            <ul>
+                <li>Completed introductory HTML and CSS exercises.</li>
+                <li>Developed basic C++ programming assignments.</li>
+                <li>Created and published a personal website using GitHub Pages.</li>
+                <li>Participated in academic projects involving technology.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h3>Certifications and Recognition</h3>
+            <p>
+                [Add your actual certificates, academic honors,
+                competitions, or other recognitions here.]
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. SKILLSET -->
+    <section id="skills">
+        <h2 class="section-title">Skillset & Programming Languages</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>C++ Programming</li>
+                    <li>Basic Web Development</li>
+                    <li>GitHub Pages</li>
+                </ul>
+            </div>
+
+            <div class="skill">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Problem-Solving</li>
+                    <li>Time Management</li>
+                    <li>Teamwork</li>
+                    <li>Adaptability</li>
+                    <li>Communication</li>
+                    <li>Willingness to Learn</li>
+                </ul>
+            </div>
+
+            <div class="skill">
+                <h3>Tools & Platforms</h3>
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>GitHub</li>
+                    <li>Canva</li>
+                    <li>Web Browsers</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. PROJECTS AND RESEARCHES -->
+    <section id="projects">
+        <h2 class="section-title">Projects & Researches</h2>
+
+        <div class="projects-container">
+
+            <div class="project">
+                <h3>Personal Web Portfolio</h3>
+
+                <p>
+                    A personal website designed to introduce my
+                    background, academic journey, technical skills,
+                    and projects. It demonstrates my understanding
+                    of basic web development.
+                </p>
+
+                <p><strong>Technologies:</strong> HTML5, CSS3</p>
+
+                <a href="#" target="_blank">View Project</a>
+            </div>
+
+            <div class="project">
+                <h3>Student Management System</h3>
+
+                <p>
+                    A basic C++ programming project designed to
+                    manage student information and display
+                    student grades. It demonstrates the use of
+                    variables, functions, loops, and conditional
+                    statements.
+                </p>
+
+                <p><strong>Technologies:</strong> C++</p>
+
+                <a href="#" target="_blank">View Project</a>
+            </div>
+
+            <div class="project">
+                <h3>The Cry of Santa Barbara</h3>
+
+                <p>
+                    A historical research project about the
+                    Ilonggo revolutionaries under General Martin
+                    Delgado during the Philippine Revolution
+                    of 1898.
+                </p>
+
+                <p><strong>Focus:</strong> Historical Research</p>
+
+                <a href="#" target="_blank">View Research</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. WORK ETHICS AND CORE VALUES -->
+    <section id="values">
+        <h2 class="section-title">Work Ethics & Core Values</h2>
+
+        <div class="content-card">
+            <p>
+                I believe that becoming a successful IT professional
+                requires more than technical knowledge. It also
+                requires discipline, responsibility, and a positive
+                attitude toward learning and working with others.
+            </p>
+
+            <br>
+
+            <ul class="values-list">
+                <li><strong>Responsibility:</strong> Completing tasks and fulfilling commitments.</li>
+
+                <li><strong>Time Management:</strong> Organizing tasks and meeting deadlines.</li>
+
+                <li><strong>Continuous Learning:</strong> Improving my knowledge and technical skills.</li>
+
+                <li><strong>Adaptability:</strong> Being open to new technologies and challenges.</li>
+
+                <li><strong>Teamwork:</strong> Respecting ideas and cooperating with others.</li>
+
+                <li><strong>Quality Work:</strong> Creating organized, readable, and functional code.</li>
+
+                <li><strong>Integrity:</strong> Being honest and responsible in academic and professional work.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Prince Jhian T. De los Reyes</p>
+        <p>Personal Web Portfolio | BSIT 1-D</p>
+    </footer>
+
 </body>
 </html>
