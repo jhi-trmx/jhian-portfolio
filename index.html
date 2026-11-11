@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prince Jhian De los Reyes| Personal Portfolio</title>
+    <title>Prince Jhian | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -15,16 +19,18 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #263445;
+            font-family: 'Inter', sans-serif;
+            background: #0b0615;
+            color: #eee7ff;
             line-height: 1.7;
         }
 
+        /* NAVIGATION */
+
         header {
-            background: #172b4d;
-            color: white;
-            padding: 18px 8%;
+            background: rgba(18, 9, 36, 0.95);
+            border-bottom: 1px solid #7438c9;
+            padding: 20px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -33,10 +39,13 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            backdrop-filter: blur(15px);
         }
 
         header h2 {
-            font-size: 22px;
+            font-family: 'Orbitron', sans-serif;
+            color: #c084fc;
+            letter-spacing: 2px;
         }
 
         nav {
@@ -46,144 +55,174 @@
         }
 
         nav a {
-            color: white;
+            color: #d8c5ff;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #61dafb;
+            color: #ffffff;
+            text-shadow: 0 0 12px #b44dff;
         }
 
-        section {
-            padding: 75px 10%;
-            scroll-margin-top: 75px;
-        }
+        /* HERO */
 
         .hero {
-            background: #172b4d;
-            color: white;
-            min-height: 400px;
+            background:
+                radial-gradient(circle at 80% 30%, #451477 0%, transparent 40%),
+                linear-gradient(135deg, #160927, #090413);
+            min-height: 500px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 50px;
             flex-wrap: wrap;
+            padding: 70px 10%;
         }
 
         .hero img {
-            width: 180px;
-            height: 180px;
+            width: 190px;
+            height: 190px;
             object-fit: cover;
             border-radius: 50%;
-            border: 5px solid #61dafb;
+            border: 4px solid #c084fc;
+            box-shadow: 0 0 20px #a855f7,
+                        0 0 45px #7025ad;
         }
 
         .hero h1 {
+            font-family: 'Orbitron', sans-serif;
             font-size: 38px;
-            margin-bottom: 10px;
+            color: white;
+            margin-bottom: 12px;
+            text-shadow: 0 0 20px #b45cff;
         }
 
         .hero p {
-            color: #cbd5e1;
+            color: #c8b5e8;
+            max-width: 550px;
         }
 
-        .hero .subtitle {
-            color: #61dafb;
-            font-size: 18px;
+        .subtitle {
+            color: #d8a4ff !important;
             margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 80px 10%;
+            scroll-margin-top: 85px;
         }
 
         .section-title {
-            color: #172b4d;
-            font-size: 28px;
-            margin-bottom: 25px;
-            border-left: 5px solid #1597bb;
-            padding-left: 12px;
+            font-family: 'Orbitron', sans-serif;
+            color: #c084fc;
+            font-size: 26px;
+            margin-bottom: 30px;
+            border-left: 4px solid #a855f7;
+            padding-left: 15px;
+            text-shadow: 0 0 15px #8b35c9;
         }
 
-        .content-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-            margin-bottom: 20px;
+        /* CARDS */
+
+        .content-card,
+        .project,
+        .skill {
+            background: linear-gradient(145deg, #1c1030, #120a20);
+            border: 1px solid #573080;
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 5px 20px rgba(139, 53, 201, 0.12);
+            transition: 0.3s;
         }
 
-        .content-card h3 {
-            color: #172b4d;
-            margin-bottom: 10px;
+        .content-card:hover,
+        .project:hover,
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #c084fc;
+            box-shadow: 0 0 22px rgba(168, 85, 247, 0.3);
         }
 
-        .content-card p {
-            color: #526174;
+        .content-card h3,
+        .project h3,
+        .skill h3 {
+            color: #d8a4ff;
+            margin-bottom: 12px;
         }
+
+        .content-card p,
+        .project p,
+        .skill li {
+            color: #c5b6d9;
+        }
+
+        /* SKILLS AND PROJECTS */
 
         .skills-container,
         .projects-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .skill {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            border-bottom: 4px solid #1597bb;
-        }
-
-        .skill h3 {
-            color: #172b4d;
-            margin-bottom: 10px;
+            gap: 22px;
         }
 
         .skill ul {
             padding-left: 20px;
-            color: #526174;
         }
 
-        .project {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        .skill li {
+            margin-bottom: 7px;
         }
 
-        .project h3 {
-            color: #172b4d;
-            margin-bottom: 10px;
-        }
+        /* PROJECT LINKS */
 
         .project a {
             display: inline-block;
-            margin-top: 12px;
-            color: #087e9e;
+            margin-top: 15px;
+            padding: 9px 18px;
+            color: white;
+            background: #7629b8;
+            border: 1px solid #bd83ff;
+            border-radius: 7px;
             text-decoration: none;
-            font-weight: bold;
+            transition: 0.3s;
         }
 
         .project a:hover {
-            text-decoration: underline;
+            background: #a855f7;
+            box-shadow: 0 0 15px #a855f7;
         }
+
+        /* VALUES */
 
         .values-list {
             padding-left: 25px;
-            color: #526174;
+            color: #c5b6d9;
         }
 
         .values-list li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
+
+        /* FOOTER */
 
         footer {
-            background: #172b4d;
-            color: white;
+            background: #10071d;
+            border-top: 1px solid #7438c9;
+            color: #c5b6d9;
             text-align: center;
-            padding: 25px;
+            padding: 30px;
         }
 
+        /* RESPONSIVE */
+
         @media (max-width: 768px) {
+
             header {
                 justify-content: center;
                 text-align: center;
@@ -200,15 +239,24 @@
 
             .hero {
                 text-align: center;
-                padding: 60px 8%;
+                padding: 65px 7%;
             }
 
             .hero h1 {
-                font-size: 29px;
+                font-size: 27px;
             }
 
             section {
                 padding: 55px 7%;
+            }
+
+            .section-title {
+                font-size: 21px;
+            }
+
+            .skills-container,
+            .projects-container {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -218,7 +266,7 @@
 
     <!-- NAVIGATION -->
     <header>
-        <h2>Prince Jhian</h2>
+        <h2>PRINCE JHIAN</h2>
 
         <nav>
             <a href="#profile">Profile</a>
@@ -230,13 +278,13 @@
         </nav>
     </header>
 
-    <!-- 1. PROFILE AND BIOGRAPHY -->
+    <!-- 1. PROFILE -->
     <section class="hero" id="profile">
 
         <img src="profile.jpg" alt="Prince Jhian Profile Picture">
 
         <div>
-            <p class="subtitle">BSIT 1-D | Aspiring Web Developer</p>
+            <p class="subtitle">BSIT 1-D | ASPIRING WEB DEVELOPER</p>
 
             <h1>Hi, I'm Prince Jhian!</h1>
 
@@ -249,6 +297,7 @@
 
     </section>
 
+    <!-- BIOGRAPHY -->
     <section>
         <h2 class="section-title">About Me</h2>
 
@@ -276,7 +325,7 @@
         <h2 class="section-title">Academic Background</h2>
 
         <div class="content-card">
-            <h3>Current College Education</h3>
+            <h3>College Education</h3>
             <p><strong>Program:</strong> Bachelor of Science in Information Technology</p>
             <p><strong>Section:</strong> BSIT 1-D</p>
             <p><strong>Institution:</strong> [Your College/University]</p>
@@ -301,7 +350,7 @@
         </div>
     </section>
 
-    <!-- 3. NOTABLE ACHIEVEMENTS -->
+    <!-- 3. ACHIEVEMENTS -->
     <section id="achievements">
         <h2 class="section-title">Notable Achievements</h2>
 
@@ -324,7 +373,7 @@
         </div>
     </section>
 
-    <!-- 4. SKILLSET -->
+    <!-- 4. SKILLS -->
     <section id="skills">
         <h2 class="section-title">Skillset & Programming Languages</h2>
 
@@ -349,7 +398,7 @@
                     <li>Teamwork</li>
                     <li>Adaptability</li>
                     <li>Communication</li>
-                    <li>Willingness to Learn</li>
+                    <li>Continuous Learning</li>
                 </ul>
             </div>
 
@@ -366,7 +415,7 @@
         </div>
     </section>
 
-    <!-- 5. PROJECTS AND RESEARCHES -->
+    <!-- 5. PROJECTS AND RESEARCH -->
     <section id="projects">
         <h2 class="section-title">Projects & Researches</h2>
 
@@ -426,6 +475,7 @@
         <h2 class="section-title">Work Ethics & Core Values</h2>
 
         <div class="content-card">
+
             <p>
                 I believe that becoming a successful IT professional
                 requires more than technical knowledge. It also
@@ -436,20 +486,43 @@
             <br>
 
             <ul class="values-list">
-                <li><strong>Responsibility:</strong> Completing tasks and fulfilling commitments.</li>
+                <li>
+                    <strong>Responsibility:</strong>
+                    Completing tasks and fulfilling commitments.
+                </li>
 
-                <li><strong>Time Management:</strong> Organizing tasks and meeting deadlines.</li>
+                <li>
+                    <strong>Time Management:</strong>
+                    Organizing tasks and meeting deadlines.
+                </li>
 
-                <li><strong>Continuous Learning:</strong> Improving my knowledge and technical skills.</li>
+                <li>
+                    <strong>Continuous Learning:</strong>
+                    Improving my knowledge and technical skills.
+                </li>
 
-                <li><strong>Adaptability:</strong> Being open to new technologies and challenges.</li>
+                <li>
+                    <strong>Adaptability:</strong>
+                    Being open to new technologies and challenges.
+                </li>
 
-                <li><strong>Teamwork:</strong> Respecting ideas and cooperating with others.</li>
+                <li>
+                    <strong>Teamwork:</strong>
+                    Respecting ideas and cooperating with others.
+                </li>
 
-                <li><strong>Quality Work:</strong> Creating organized, readable, and functional code.</li>
+                <li>
+                    <strong>Quality Work:</strong>
+                    Creating organized, readable, and functional code.
+                </li>
 
-                <li><strong>Integrity:</strong> Being honest and responsible in academic and professional work.</li>
+                <li>
+                    <strong>Integrity:</strong>
+                    Being honest and responsible in academic
+                    and professional work.
+                </li>
             </ul>
+
         </div>
     </section>
 
